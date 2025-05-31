@@ -1,0 +1,7 @@
+fullname: i27-user
+replicas:
+  default: 1
+image: 
+  name: docker.io/i27devopsb6/user
+  tag: random
+targetPort: 8232
