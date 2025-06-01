@@ -46,6 +46,9 @@ server:
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://34.9.167.22:31624/eureka/
+      defaultZone: http://dev-eureka.i27academy.in/eureka/
   instance:
     preferIpAddress: true
+
+
+
