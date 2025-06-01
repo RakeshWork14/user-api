@@ -5,3 +5,5 @@ image:
   name: devopsb6.jfrog.io/cart-docker-docker/user
   tag: random
 targetPort: 8232
+service:
+  type: NodePort
