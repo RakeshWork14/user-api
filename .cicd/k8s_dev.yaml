@@ -12,6 +12,8 @@ spec:
       labels:
         name: i27-user-prod
     spec: 
+      imagePullSecrets: 
+      - name: docker-secret  #same name you created "docker-registry secret" under dev namespace
       containers:
       - name: i27-user-prod
         image: DIT  # Docker image tag will replaces by shared libraries
