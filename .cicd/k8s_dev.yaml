@@ -28,4 +28,26 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: 8761
-  type: NodePort            
+  type: ClusterIP   
+
+---         
+
+# creating a ingress for your domain (domainname= cart.rakesh.dev.com)
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: user-dev-ingress
+  namespace: default
+spec:
+  rules:
+    - host: cart.rakesh.dev.com  # ip's changing so we created domain name and using that domain name here and paste this name for application.yaml
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: i27-user-dev-svc  # Correct service name
+                port:
+                  number: 80
