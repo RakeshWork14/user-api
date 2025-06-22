@@ -4,10 +4,5 @@
 // "@main" you defualt version in manage jenkins or  git branch of your shared librarys
 @Library("i27academy-slb@main") _
     dockerPipeline(
-        appName: 'user',
-        devPort: '5232',
-        testPort: '6232',
-        stagePort: '7232',
-        prodPort: '8232',
-        contPort: '8232'
+        appName: 'user'
     )
